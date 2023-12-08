@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keep Awake</title>
+</head>
+<body>
+    <textarea id="keepAwake" rows="4" cols="50"></textarea>
+
+    <script>
+        var textArea = document.getElementById('keepAwake');
+        var text = "Keeping your system awake...";
+        var index = 0;
+
+        function typeText() {
+            if(index < text.length) {
+                textArea.value += text.charAt(index);
+                index++;
+            } else {
+                textArea.value = '';
+                index = 0;
+            }
+        }
+
+        setInterval(typeText, 1000); // types a character every second
+    </script>
+</body>
+</html>
